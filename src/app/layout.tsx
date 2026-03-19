@@ -30,7 +30,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
                 <link rel="icon" href="/favicon.ico" type="image/x-icon" />
                 <link rel="apple-touch-icon" href="/icons/icon-192.png" />
             </head>
-            <body className="h-full bg-[#e8f4ff] antialiased">
+            <body className="h-full bg-white antialiased">
                 <main className="h-full">{children}</main>
                 <TailwindIndicator />
             </body>

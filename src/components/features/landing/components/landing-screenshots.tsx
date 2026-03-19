@@ -19,7 +19,7 @@ export const LandingScreenshots = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setIndex(prev => (prev + 1) % images.length)
-        }, 3000)
+        }, 4000)
 
         return () => clearInterval(interval)
     }, [])
@@ -32,7 +32,7 @@ export const LandingScreenshots = () => {
                     src={src}
                     alt="App screenshot"
                     fill
-                    className={`absolute top-0 left-0 object-contain transition-opacity duration-1000 ${
+                    className={`absolute top-0 left-0 object-contain transition-opacity duration-500 ${
                         i === index ? 'opacity-100' : 'opacity-0'
                     }`}
                     priority={i === 0}
