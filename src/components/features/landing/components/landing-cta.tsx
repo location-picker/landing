@@ -12,7 +12,7 @@ const CTA_BUTTONS = [
     },
     {
         id: 'web',
-        href: '#',
+        href: 'https://app.mysavedplaces.com',
         icon: '/images/app-button/web-logo.svg',
         textIcon: '/images/app-button/web-text.svg',
         alt: 'Open Web App',
