@@ -27,7 +27,6 @@ export const LandingCTA = () => {
                 <Link
                     key={button.id}
                     href={button.href}
-                    target="_blank"
                     rel="noopener noreferrer"
                     className="group inline-flex items-center gap-1.5 rounded-lg bg-neutral-900 px-4 py-2.5 text-white transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(0,0,0,0.12)] active:scale-[0.98]"
                 >
