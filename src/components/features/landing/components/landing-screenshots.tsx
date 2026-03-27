@@ -32,6 +32,8 @@ export const LandingScreenshots = () => {
                     src={src}
                     alt="App screenshot"
                     fill
+                    width={1419}
+                    height={2796}
                     className={`absolute top-0 left-0 object-contain transition-opacity duration-500 ${
                         i === index ? 'opacity-100' : 'opacity-0'
                     }`}
