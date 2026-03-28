@@ -7,7 +7,7 @@ import { LandingScreenshots } from './components/landing-screenshots'
 export const Landing = () => {
     return (
         <main className="wrapper flex min-h-full w-full flex-col items-center justify-center gap-y-12 bg-white px-4 py-12 md:p-12">
-            <div className="flex flex-col-reverse items-center gap-12 md:max-w-6xl lg:flex-row lg:items-center lg:gap-16">
+            <div className="flex w-full flex-col-reverse items-center gap-12 md:max-w-6xl lg:flex-row lg:items-center lg:gap-16">
                 <LandingScreenshots />
 
                 <div className="text-center lg:text-left">
