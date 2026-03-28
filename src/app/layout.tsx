@@ -3,6 +3,7 @@ import { ReactNode } from 'react'
 import classNames from 'classnames'
 import type { Viewport } from 'next'
 
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { Roboto } from 'next/font/google'
 
 import { TailwindIndicator } from '@/components/ui/tailwind-indicator'
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
             </head>
             <body className="h-full bg-white antialiased">
                 <main className="h-full">{children}</main>
+                <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID as string} />
                 <TailwindIndicator />
             </body>
         </html>
