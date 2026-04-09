@@ -10,6 +10,7 @@ const images = [
     `/images/screenshots/save-location-${modifier}.png`,
     `/images/screenshots/google-${modifier}.png`,
     `/images/screenshots/saved-locations-${modifier}.png`,
+    `/images/screenshots/list-${modifier}.png`,
     `/images/screenshots/preview-location-${modifier}.png`,
 ]
 
