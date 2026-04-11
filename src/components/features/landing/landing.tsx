@@ -1,7 +1,7 @@
 'use client'
 
+import { LandingApps } from './components/landing-apps'
 import { LandingCTA } from './components/landing-cta'
-import { LandingNavigators } from './components/landing-navigators'
 import { LandingScreenshots } from './components/landing-screenshots'
 
 export const Landing = () => {
@@ -16,11 +16,11 @@ export const Landing = () => {
                     </h1>
 
                     <p className="mb-6 text-lg text-gray-600 md:text-xl">
-                        Keep all your favorite locations in one place. Save a location in seconds and navigate instantly
-                        using your favorite navigation app.
+                        Organize locations and save favorite places in seconds. Keep everything in one place and
+                        navigate instantly using your favorite app.
                     </p>
 
-                    <LandingNavigators />
+                    <LandingApps />
                     <LandingCTA />
                 </div>
             </div>

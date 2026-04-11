@@ -5,8 +5,21 @@ import { Landing } from '@/components/features/landing/landing'
 export const metadata: Metadata = {
     title: 'My Saved Places',
     description:
-        'Keep all your favorite locations in one place. Save a location in seconds and navigate instantly using your favorite navigation app.',
-    keywords: ['my saved places', 'favorite locations', 'saved locations', 'location organizer'],
+        'Organize locations and save favorite places in seconds. Keep everything in one place and navigate instantly using your favorite app.',
+    keywords: [
+        'my saved places',
+        'favorite locations',
+        'saved locations',
+        'location organizer',
+        'save favorite places',
+        'organize locations',
+        'store locations',
+        'place organizer',
+        'map organizer',
+        'location manager',
+        'save places app',
+        'organize saved places',
+    ],
 
     alternates: {
         canonical: '/',
@@ -24,7 +37,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'My Saved Places',
         description:
-            'Keep all your favorite locations in one place. Save a location in seconds and navigate instantly using your favorite navigation app.',
+            'Organize locations and save favorite places in seconds. Keep everything in one place and navigate instantly using your favorite app.',
         type: 'website',
         locale: 'en_US',
         url: '/',
@@ -43,7 +56,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'My Saved Places',
         description:
-            'Keep all your favorite locations in one place. Save a location in seconds and navigate instantly using your favorite navigation app.',
+            'Organize locations and save favorite places in seconds. Keep everything in one place and navigate instantly using your favorite app.',
         images: ['/images/screenshots/home-portrait.png'],
     },
 }

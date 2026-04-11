@@ -10,8 +10,10 @@ const images = [
     `/images/screenshots/save-location-${modifier}.png`,
     `/images/screenshots/google-${modifier}.png`,
     `/images/screenshots/saved-locations-${modifier}.png`,
-    `/images/screenshots/list-${modifier}.png`,
+    `/images/screenshots/saved-locations-list-${modifier}.png`,
     `/images/screenshots/preview-location-${modifier}.png`,
+    `/images/screenshots/converter-${modifier}.png`,
+    `/images/screenshots/settings-apps-${modifier}.png`,
 ]
 
 export const LandingScreenshots = () => {
