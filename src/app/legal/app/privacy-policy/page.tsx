@@ -5,7 +5,7 @@ import { PrivacyPolicyApp } from '@/components/features/legal/privacy-policy-app
 export const metadata: Metadata = {
     title: 'Privacy Policy',
     description:
-        'Privacy Policy for the My Saved Places app. Learn how the app handles location data, local storage, and optional iCloud synchronization.',
+        'Privacy Policy for the My Saved Places app. Learn how the app handles local storage, location access, search requests, coordinates, and third-party map, navigation, and taxi integrations.',
     keywords: [],
 
     alternates: {
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Privacy Policy',
         description:
-            'Privacy Policy for the My Saved Places app. Learn how the app handles location data, local storage, and optional iCloud synchronization.',
+            'Privacy Policy for the My Saved Places app. Learn how the app handles local storage, location access, search requests, coordinates, and third-party map, navigation, and taxi integrations.',
         type: 'article',
         locale: 'en_US',
         url: '/legal/app/privacy-policy',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
         card: 'summary',
         title: 'Privacy Policy',
         description:
-            'Privacy Policy for the My Saved Places app. Learn how the app handles location data, local storage, and optional iCloud synchronization.',
+            'Privacy Policy for the My Saved Places app. Learn how the app handles local storage, location access, search requests, coordinates, and third-party map, navigation, and taxi integrations.',
     },
 }
 
