@@ -33,6 +33,11 @@ export const PrivacyPolicyApp = () => {
                     <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
                         Saved places, lists, and selected app preferences are stored locally on your device.
                     </p>
+
+                    <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
+                        We do not create user accounts and we do not store your saved places, lists, app selection, or
+                        current device location on our servers.
+                    </p>
                 </section>
 
                 <section className="space-y-3 sm:space-y-4">
@@ -44,7 +49,8 @@ export const PrivacyPolicyApp = () => {
                     </p>
 
                     <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
-                        Your current location is not used by us for advertising, analytics, or profiling.
+                        Your current device location is not uploaded by us for storage, advertising, analytics,
+                        tracking, or profiling.
                     </p>
                 </section>
 
