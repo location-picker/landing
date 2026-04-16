@@ -7,12 +7,11 @@ const modifier: Modifier = 'portrait'
 
 const images = [
     `/images/screenshots/home-${modifier}.png`,
-    `/images/screenshots/save-location-${modifier}.png`,
+    `/images/screenshots/save-${modifier}.png`,
     `/images/screenshots/google-${modifier}.png`,
-    `/images/screenshots/saved-locations-${modifier}.png`,
-    `/images/screenshots/saved-locations-list-${modifier}.png`,
-    `/images/screenshots/preview-location-${modifier}.png`,
-    `/images/screenshots/converter-${modifier}.png`,
+    `/images/screenshots/saved-${modifier}.png`,
+    `/images/screenshots/saved-list-${modifier}.png`,
+    `/images/screenshots/preview-${modifier}.png`,
     `/images/screenshots/settings-apps-${modifier}.png`,
 ]
 
