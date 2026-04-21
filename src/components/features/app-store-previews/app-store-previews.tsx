@@ -29,8 +29,8 @@ export const appStorePreviews: Preview[] = [
     },
     {
         id: '3',
-        title: 'Add new places',
-        description: 'Save any location in just a few seconds',
+        title: 'Save any places',
+        description: 'Add any location in just a few seconds',
         screenshot: '/images/screenshots/save-portrait.png',
         screenshotAlt: 'My Saved Places save screen',
         tone: 'save',
@@ -85,17 +85,94 @@ const Background = ({ tone }: { tone: Preview['tone'] }) => {
     )
 }
 
+const AppIconBackground = () => {
+    return (
+        <>
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_22%_18%,rgba(255,132,31,0.3),transparent_34%),radial-gradient(circle_at_82%_78%,rgba(34,197,94,0.18),transparent_32%),linear-gradient(160deg,#fffaf2_0%,#ffffff_48%,#fff1df_100%)]" />
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(17,24,39,0.52)_1px,transparent_1px),linear-gradient(90deg,rgba(17,24,39,0.52)_1px,transparent_1px)] bg-size-[48px_48px] opacity-[0.08]" />
+            <div className="absolute -top-22 -left-24 h-72 w-72 rounded-full border-24 border-orange-200/35" />
+            <div className="absolute -right-28 -bottom-24 h-86 w-86 rounded-full border-28 border-orange-300/25" />
+        </>
+    )
+}
+
+export const AppIconArtwork = () => {
+    return (
+        <section aria-label="iOS app icon preview" className="h-258 w-258 bg-black p-1">
+            <div className="relative flex h-256 w-5xl items-center justify-center overflow-hidden bg-[linear-gradient(145deg,#fed7aa_0%,#fb923c_24%,#f97316_52%,#c2410c_100%)] text-gray-950">
+                {/* <AppIconBackground /> */}
+                {/* <Image
+                    src="/images/ios-light.png"
+                    alt=""
+                    fill
+                    priority
+                    sizes="1024px"
+                    className="absolute inset-0 object-cover opacity-60"
+                /> */}
+
+                <div className="relative z-10 flex h-full w-full items-center justify-center">
+                    {/* <MapPinIcon size={688} strokeWidth={1} color="#000" fill="#fff" /> */}
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="688"
+                        height="688"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        aria-hidden="true"
+                    >
+                        <mask id="app-icon-pin-hole">
+                            <rect width="24" height="24" fill="white" />
+                            <circle cx="12" cy="10" r="3" fill="black" />
+                        </mask>
+                        <path
+                            d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
+                            fill="#fff"
+                            mask="url(#app-icon-pin-hole)"
+                            stroke="#111827"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="1.2"
+                        />
+                        <circle cx="12" cy="10" r="3" fill="none" stroke="#111827" strokeWidth="1.2" />
+                    </svg>
+                </div>
+            </div>
+        </section>
+    )
+}
+
+export const SplashArtwork = () => {
+    return (
+        <section aria-label="App splash preview" className="h-[2786px] w-[1292px] bg-black p-1">
+            <div className="relative flex h-[2778px] w-[1284px] items-center justify-center overflow-hidden bg-white">
+                <div className="absolute top-[-262px] right-[-66px] h-[918px] w-[918px] rounded-full bg-orange-200" />
+                <div className="absolute bottom-[-361px] left-[-131px] h-[853px] w-[853px] rounded-full bg-orange-300/35" />
+
+                {/* <div className="relative flex min-h-[984px] w-full items-center justify-center px-[105px]">
+                    <div className="h-[276px] w-[276px] drop-shadow-[0_52px_79px_rgba(124,45,18,0.18)]">
+                        <MapPinCheck size={276} strokeWidth={1.5} color="#000" />
+                    </div>
+
+                    <div className="absolute top-[656px] w-[918px] text-center text-[66px] leading-[92px] font-bold text-gray-900 uppercase">
+                        My <span className="text-orange-500">Saved</span> Places
+                    </div>
+                </div> */}
+            </div>
+        </section>
+    )
+}
+
 const PhoneScreenshot = ({ preview }: { preview: Preview }) => {
     return (
-        <div className="relative mt-24 h-462.5 w-235">
-            <div className="absolute inset-x-8 top-18 h-445 rounded-[150px] bg-orange-400/25 blur-3xl" />
+        <div className="relative mt-14 h-518 w-262">
+            <div className="absolute inset-x-8 top-18 h-500 rounded-[168px] bg-orange-400/25 blur-3xl" />
             <div className="absolute inset-0 rounded-[128px] bg-gray-950/10 blur-xl" />
             <Image
                 src={preview.screenshot}
                 alt={preview.screenshotAlt}
                 fill
                 priority={preview.id === '1'}
-                sizes="940px"
+                sizes="1048px"
                 className="relative object-contain drop-shadow-[0_52px_76px_rgba(15,23,42,0.26)]"
             />
         </div>
@@ -137,6 +214,30 @@ const PreviewThumbnail = ({ preview }: { preview: Preview }) => {
     )
 }
 
+const AppIconThumbnail = () => {
+    return (
+        <Link href="/app-store-previews/app-icon" className="group block">
+            <div className="h-41.25 w-41.25 overflow-hidden bg-white shadow-xl ring-1 ring-gray-200 transition duration-200 group-hover:-translate-y-1 group-hover:shadow-2xl">
+                <div className="origin-top-left scale-[0.16]">
+                    <AppIconArtwork />
+                </div>
+            </div>
+        </Link>
+    )
+}
+
+const SplashThumbnail = () => {
+    return (
+        <Link href="/app-store-previews/splash" className="group block">
+            <div className="h-112.25 w-52 overflow-hidden bg-white shadow-xl ring-1 ring-gray-200 transition duration-200 group-hover:-translate-y-1 group-hover:shadow-2xl">
+                <div className="origin-top-left scale-[0.16]">
+                    <SplashArtwork />
+                </div>
+            </div>
+        </Link>
+    )
+}
+
 export const AppStorePreviews = () => {
     return (
         <main className="min-h-full bg-neutral-100 p-10">
@@ -144,6 +245,12 @@ export const AppStorePreviews = () => {
                 {appStorePreviews.map(preview => (
                     <PreviewThumbnail key={preview.id} preview={preview} />
                 ))}
+            </div>
+            <div className="mt-10">
+                <AppIconThumbnail />
+            </div>
+            <div className="mt-10">
+                <SplashThumbnail />
             </div>
         </main>
     )
