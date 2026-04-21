@@ -5,15 +5,9 @@ import Image from 'next/image'
 type Modifier = 'portrait' | 'left'
 const modifier: Modifier = 'portrait'
 
-const images = [
-    `/images/screenshots/home-${modifier}.png`,
-    `/images/screenshots/save-${modifier}.png`,
-    `/images/screenshots/google-${modifier}.png`,
-    `/images/screenshots/saved-${modifier}.png`,
-    `/images/screenshots/saved-list-${modifier}.png`,
-    `/images/screenshots/preview-${modifier}.png`,
-    `/images/screenshots/settings-apps-${modifier}.png`,
-]
+const screenshotFlow = ['home', 'google', 'home', 'save', 'saved', 'saved-list', 'preview', 'home', 'settings-apps']
+
+const images = screenshotFlow.map(name => `/images/screenshots/${name}-${modifier}.png`)
 
 export const LandingScreenshots = () => {
     const [index, setIndex] = useState(0)
@@ -30,7 +24,7 @@ export const LandingScreenshots = () => {
         <div className="relative h-166 w-100 shrink-0">
             {images.map((src, i) => (
                 <Image
-                    key={src}
+                    key={`screenshot-${i}`}
                     src={src}
                     alt="App screenshot"
                     fill
