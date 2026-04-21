@@ -1,45 +1,15 @@
-import { useEffect, useState } from 'react'
-
 import Image from 'next/image'
 
-type Modifier = 'portrait' | 'left'
-const modifier: Modifier = 'portrait'
-
-const images = [
-    `/images/screenshots/home-${modifier}.png`,
-    `/images/screenshots/save-${modifier}.png`,
-    `/images/screenshots/google-${modifier}.png`,
-    `/images/screenshots/saved-${modifier}.png`,
-    `/images/screenshots/saved-list-${modifier}.png`,
-    `/images/screenshots/preview-${modifier}.png`,
-    `/images/screenshots/settings-apps-${modifier}.png`,
-]
-
 export const LandingScreenshots = () => {
-    const [index, setIndex] = useState(0)
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setIndex(prev => (prev + 1) % images.length)
-        }, 4000)
-
-        return () => clearInterval(interval)
-    }, [])
-
     return (
-        <div className="relative h-166 w-100 shrink-0">
-            {images.map((src, i) => (
-                <Image
-                    key={src}
-                    src={src}
-                    alt="App screenshot"
-                    fill
-                    className={`absolute top-0 left-0 object-contain transition-opacity duration-500 ${
-                        i === index ? 'opacity-100' : 'opacity-0'
-                    }`}
-                    priority={i === 0}
-                />
-            ))}
+        <div className="relative h-[453px] w-[296px] shrink-0 overflow-hidden rounded-[6px] bg-white shadow-[0_26px_70px_rgba(21,31,42,0.24)] ring-1 ring-black/10">
+            <Image
+                src="/images/screenshots/popup.png"
+                alt="Cart Keeper extension popup with saved products grouped by store"
+                fill
+                className="object-contain"
+                priority
+            />
         </div>
     )
 }

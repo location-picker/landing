@@ -3,22 +3,19 @@ import { Metadata } from 'next'
 import { Landing } from '@/components/features/landing/landing'
 
 export const metadata: Metadata = {
-    title: 'My Saved Places',
+    title: 'Cart Keeper',
     description:
-        'Organize locations and save favorite places in seconds. Keep everything in one place and navigate instantly using your favorite app.',
+        'Save products from different marketplaces into one simple, private shopping shortlist with the Cart Keeper Chrome extension.',
     keywords: [
-        'my saved places',
-        'favorite locations',
-        'saved locations',
-        'location organizer',
-        'save favorite places',
-        'organize locations',
-        'store locations',
-        'place organizer',
-        'map organizer',
-        'location manager',
-        'save places app',
-        'organize saved places',
+        'cart keeper',
+        'cart picker',
+        'shopping extension',
+        'chrome shopping extension',
+        'save products',
+        'marketplace wishlist',
+        'shopping shortlist',
+        'compare products',
+        'online shopping organizer',
     ],
 
     alternates: {
@@ -31,33 +28,33 @@ export const metadata: Metadata = {
     },
 
     appleWebApp: {
-        title: 'My Saved Places',
+        title: 'Cart Keeper',
     },
 
     openGraph: {
-        title: 'My Saved Places',
+        title: 'Cart Keeper',
         description:
-            'Organize locations and save favorite places in seconds. Keep everything in one place and navigate instantly using your favorite app.',
+            'Save products from different marketplaces into one simple, private shopping shortlist with the Cart Keeper Chrome extension.',
         type: 'website',
         locale: 'en_US',
         url: '/',
-        siteName: 'My Saved Places',
+        siteName: 'Cart Keeper',
         images: [
             {
-                url: '/images/screenshots/home-portrait.png',
-                width: 1200,
-                height: 630,
-                alt: 'My Saved Places',
+                url: '/images/screenshots/popup.png',
+                width: 296,
+                height: 453,
+                alt: 'Cart Keeper',
             },
         ],
     },
 
     twitter: {
         card: 'summary_large_image',
-        title: 'My Saved Places',
+        title: 'Cart Keeper',
         description:
-            'Organize locations and save favorite places in seconds. Keep everything in one place and navigate instantly using your favorite app.',
-        images: ['/images/screenshots/home-portrait.png'],
+            'Save products from different marketplaces into one simple, private shopping shortlist with the Cart Keeper Chrome extension.',
+        images: ['/images/screenshots/popup.png'],
     },
 }
 
