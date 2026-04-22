@@ -181,22 +181,23 @@ const PhoneScreenshot = ({ preview }: { preview: Preview }) => {
 
 export const AppStorePreviewArtwork = ({ preview }: { preview: Preview }) => {
     return (
-        <section aria-label={`App Store preview ${preview.id}`} className="h-701 w-324.5 bg-black p-1">
-            <div className="relative h-699 w-322.5 overflow-hidden bg-[#fff8ef] text-gray-950">
-                <Background tone={preview.tone} />
+        <section
+            aria-label={`App Store preview ${preview.id}`}
+            className="relative h-699 w-322.5 overflow-hidden bg-[#fff8ef] text-gray-950"
+        >
+            <Background tone={preview.tone} />
 
-                <div className="relative z-10 flex h-full flex-col items-center px-28 pt-44">
-                    <div className="text-center">
-                        <h1 className="mx-auto max-w-5xl text-[104px] leading-[0.96] font-black tracking-normal">
-                            {preview.title}
-                        </h1>
-                        <p className="mx-auto mt-7 max-w-195 text-[54px] leading-[1.08] font-bold text-gray-600">
-                            {preview.description}
-                        </p>
-                    </div>
-
-                    <PhoneScreenshot preview={preview} />
+            <div className="relative z-10 flex h-full flex-col items-center px-28 pt-44">
+                <div className="text-center">
+                    <h1 className="mx-auto max-w-5xl text-[104px] leading-[0.96] font-black tracking-normal">
+                        {preview.title}
+                    </h1>
+                    <p className="mx-auto mt-7 max-w-195 text-[54px] leading-[1.08] font-bold text-gray-600">
+                        {preview.description}
+                    </p>
                 </div>
+
+                <PhoneScreenshot preview={preview} />
             </div>
         </section>
     )
@@ -205,7 +206,7 @@ export const AppStorePreviewArtwork = ({ preview }: { preview: Preview }) => {
 const PreviewThumbnail = ({ preview }: { preview: Preview }) => {
     return (
         <Link href={`/app-store-previews/${preview.id}`} className="group block">
-            <div className="h-112.25 w-52 overflow-hidden bg-white shadow-xl ring-1 ring-gray-200 transition duration-200 group-hover:-translate-y-1 group-hover:shadow-2xl">
+            <div className="h-[447.36px] w-[206.4px] overflow-hidden bg-white shadow-xl ring-1 ring-gray-200 transition duration-200 group-hover:-translate-y-1 group-hover:shadow-2xl">
                 <div className="origin-top-left scale-[0.16]">
                     <AppStorePreviewArtwork preview={preview} />
                 </div>
