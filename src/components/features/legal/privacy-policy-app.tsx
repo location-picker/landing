@@ -5,7 +5,7 @@ export const PrivacyPolicyApp = () => {
                 <header className="space-y-3">
                     <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">Privacy Policy</h1>
 
-                    <p className="text-sm text-gray-500">Last updated: April 12, 2026</p>
+                    <p className="text-sm text-gray-500">Last updated: April 24, 2026</p>
 
                     <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
                         This Privacy Policy applies to the <span className="font-medium">My Saved Places</span>{' '}
@@ -31,12 +31,12 @@ export const PrivacyPolicyApp = () => {
                     <h2 className="text-lg font-semibold sm:text-xl">Data Storage</h2>
 
                     <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
-                        Saved places, lists, and selected app preferences are stored locally on your device.
+                        Saved places, lists, selected app preferences, and app language are stored locally on your device. If you enable iCloud Sync on iPhone, this data may also be stored in your private iCloud account to keep it in sync across your Apple devices.
                     </p>
 
                     <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
-                        We do not create user accounts and we do not store your saved places, lists, app selection, or
-                        current device location on our servers.
+                        We do not create user accounts and we do not store your saved places, lists, app selection, app
+                        language, or current device location on our servers.
                     </p>
                 </section>
 
@@ -94,7 +94,7 @@ export const PrivacyPolicyApp = () => {
 
                     <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
                         My Saved Places may reference or link to third-party apps and services such as Apple Maps,
-                        Google Maps, MAPS.ME, Uber, Waze, Yandex Maps, Yandex Navi, and Yandex Go.
+                        Google Maps, Lyft, MAPS.ME, Uber, Waze, Yandex Maps, Yandex Navi, and Yandex Go.
                     </p>
 
                     <p className="text-sm leading-relaxed text-gray-700 sm:text-base">

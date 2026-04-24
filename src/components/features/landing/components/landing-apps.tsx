@@ -2,13 +2,10 @@ import Image from 'next/image'
 
 const NAVIGATORS = [
     { id: 'waze', name: 'Waze', icon: '/images/apps/waze.png' },
-    { id: 'yandex-navi', name: 'Yandex Navi', icon: '/images/apps/yandex-navi.png' },
     { id: 'apple-maps', name: 'Apple', icon: '/images/apps/apple-maps.png' },
     { id: 'google-maps', name: 'Google', icon: '/images/apps/google-maps.png' },
     { id: 'mapsme', name: 'Maps.me', icon: '/images/apps/mapsme.png' },
-    { id: 'yandex-maps', name: 'Yandex Maps', icon: '/images/apps/yandex-maps.png' },
     { id: 'uber', name: 'Uber', icon: '/images/apps/uber.png' },
-    { id: 'yandex-go', name: 'Yandex Go', icon: '/images/apps/yandex-go.png' },
 ]
 
 export const LandingApps = () => {
