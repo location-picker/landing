@@ -8,8 +8,8 @@ export const PrivacyPolicyApp = () => {
                     <p className="text-sm text-gray-500">Last updated: April 24, 2026</p>
 
                     <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
-                        This Privacy Policy applies to the <span className="font-medium">My Saved Places</span>{' '}
-                        mobile application.
+                        This Privacy Policy applies to the <span className="font-medium">My Saved Places</span> mobile
+                        application.
                     </p>
                 </header>
 
@@ -31,7 +31,9 @@ export const PrivacyPolicyApp = () => {
                     <h2 className="text-lg font-semibold sm:text-xl">Data Storage</h2>
 
                     <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
-                        Saved places, lists, selected app preferences, and app language are stored locally on your device. If you enable iCloud Sync on iPhone, this data may also be stored in your private iCloud account to keep it in sync across your Apple devices.
+                        Saved places, lists, selected app preferences, and app language are stored locally on your
+                        device.
+                        {/* If you enable iCloud Sync on iPhone, this data may also be stored in your private iCloud account to keep it in sync across your Apple devices. */}
                     </p>
 
                     <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
@@ -44,8 +46,8 @@ export const PrivacyPolicyApp = () => {
                     <h2 className="text-lg font-semibold sm:text-xl">Location Access</h2>
 
                     <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
-                        The app may request access to your device&apos;s location to display your current position on the
-                        map and help you choose places more easily.
+                        The app may request access to your device&apos;s location to display your current position on
+                        the map and help you choose places more easily.
                     </p>
 
                     <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
@@ -132,8 +134,7 @@ export const PrivacyPolicyApp = () => {
                     <h2 className="text-lg font-semibold sm:text-xl">Changes to This Policy</h2>
 
                     <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
-                        We may update this Privacy Policy from time to time. Any changes will be reflected on this
-                        page.
+                        We may update this Privacy Policy from time to time. Any changes will be reflected on this page.
                     </p>
                 </section>
 
