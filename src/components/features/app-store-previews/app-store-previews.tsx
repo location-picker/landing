@@ -99,7 +99,7 @@ const AppIconBackground = () => {
 export const AppIconArtwork = () => {
     return (
         <section aria-label="iOS app icon preview" className="h-258 w-258 bg-black p-1">
-            <div className="relative flex h-256 w-5xl items-center justify-center overflow-hidden bg-[linear-gradient(145deg,#ffedd5_0%,#fdba74_42%,#fb923c_100%)] text-gray-950">
+            <div className="relative flex h-256 w-5xl items-center justify-center overflow-hidden bg-white text-gray-950">
                 {/* <AppIconBackground /> */}
                 {/* <Image
                     src="/images/ios-light.png"
@@ -126,14 +126,14 @@ export const AppIconArtwork = () => {
                         </mask>
                         <path
                             d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
-                            fill="#fff"
+                            fill="#1890FF"
                             mask="url(#app-icon-pin-hole)"
-                            stroke="#111827"
+                            stroke="rgba(255,255,255,0.25)"
                             strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth="0.9"
                         />
-                        <circle cx="12" cy="10" r="3" fill="none" stroke="#111827" strokeWidth="0.9" />
+                        <circle cx="12" cy="10" r="3" fill="#fff" stroke="rgba(255,255,255,0.25)" strokeWidth="0.9" />
                     </svg>
                 </div>
             </div>
