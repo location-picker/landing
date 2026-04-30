@@ -5,6 +5,7 @@ const NAVIGATORS = [
     { id: 'apple-maps', name: 'Apple', icon: '/images/apps/apple-maps.png' },
     { id: 'google-maps', name: 'Google', icon: '/images/apps/google-maps.png' },
     { id: 'mapsme', name: 'Maps.me', icon: '/images/apps/mapsme.png' },
+    { id: 'openstreetmap', name: 'OSM', icon: '/images/apps/openstreetmap.png' },
     { id: 'uber', name: 'Uber', icon: '/images/apps/uber.png' },
     { id: 'lyft', name: 'Lyft', icon: '/images/apps/lyft.png' },
     { id: 'yandex-maps', name: 'Yandex Maps', icon: '/images/apps/yandex-maps.png' },

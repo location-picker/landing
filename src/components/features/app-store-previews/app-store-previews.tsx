@@ -148,15 +148,11 @@ export const SplashArtwork = () => {
                 <div className="absolute top-[-262px] right-[-66px] h-[918px] w-[918px] rounded-full bg-orange-200" />
                 <div className="absolute bottom-[-361px] left-[-131px] h-[853px] w-[853px] rounded-full bg-orange-300/35" />
 
-                {/* <div className="relative flex min-h-[984px] w-full items-center justify-center px-[105px]">
-                    <div className="h-[276px] w-[276px] drop-shadow-[0_52px_79px_rgba(124,45,18,0.18)]">
-                        <MapPinCheck size={276} strokeWidth={1.5} color="#000" />
-                    </div>
-
-                    <div className="absolute top-[656px] w-[918px] text-center text-[66px] leading-[92px] font-bold text-gray-900 uppercase">
+                <div className="relative flex min-h-[984px] w-full items-center justify-center px-[105px]">
+                    <div className="w-[918px] text-center text-[66px] leading-[92px] font-bold text-gray-900 uppercase">
                         My <span className="text-orange-500">Saved</span> Places
                     </div>
-                </div> */}
+                </div>
             </div>
         </section>
     )
