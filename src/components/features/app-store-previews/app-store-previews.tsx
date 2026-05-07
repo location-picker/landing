@@ -1,3 +1,5 @@
+import { CircleGaugeIcon } from 'lucide-react'
+
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -111,30 +113,7 @@ export const AppIconArtwork = () => {
                 /> */}
 
                 <div className="relative z-10 flex h-full w-full items-center justify-center">
-                    {/* <MapPinIcon size={688} strokeWidth={1} color="#000" fill="#fff" /> */}
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="688"
-                        height="688"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        aria-hidden="true"
-                    >
-                        <mask id="app-icon-pin-hole">
-                            <rect width="24" height="24" fill="white" />
-                            <circle cx="12" cy="10" r="3" fill="black" />
-                        </mask>
-                        <path
-                            d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
-                            fill="#1890FF"
-                            mask="url(#app-icon-pin-hole)"
-                            stroke="rgba(255,255,255,0.25)"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="0.9"
-                        />
-                        <circle cx="12" cy="10" r="3" fill="#fff" stroke="rgba(255,255,255,0.25)" strokeWidth="0.9" />
-                    </svg>
+                    <CircleGaugeIcon size={688} strokeWidth={1} color="#000" fill="#fff" />
                 </div>
             </div>
         </section>
@@ -145,14 +124,15 @@ export const SplashArtwork = () => {
     return (
         <section aria-label="App splash preview" className="h-[2786px] w-[1292px] bg-black p-1">
             <div className="relative flex h-[2778px] w-[1284px] items-center justify-center overflow-hidden bg-white">
-                <div className="absolute top-[-262px] right-[-66px] h-[918px] w-[918px] rounded-full bg-orange-200" />
-                <div className="absolute bottom-[-361px] left-[-131px] h-[853px] w-[853px] rounded-full bg-orange-300/35" />
+                <CircleGaugeIcon size={688} strokeWidth={1} color="#000" fill="#fff" />
+                {/* <div className="absolute top-[-262px] right-[-66px] h-[918px] w-[918px] rounded-full bg-orange-200" /> */}
+                {/* <div className="absolute bottom-[-361px] left-[-131px] h-[853px] w-[853px] rounded-full bg-orange-300/35" /> */}
 
-                <div className="relative flex min-h-[984px] w-full items-center justify-center px-[105px]">
+                {/* <div className="relative flex min-h-[984px] w-full items-center justify-center px-[105px]">
                     <div className="w-[918px] text-center text-[66px] leading-[92px] font-bold text-gray-900 uppercase">
                         My <span className="text-orange-500">Saved</span> Places
                     </div>
-                </div>
+                </div> */}
             </div>
         </section>
     )
