@@ -5,16 +5,22 @@ import { PrivacyPolicyApp } from '@/components/features/legal/privacy-policy-app
 export const metadata: Metadata = {
     title: 'Privacy Policy',
     description:
-        'Privacy Policy for the My Saved Places app. Learn how the app handles local storage, location access, search requests, coordinates, and third-party map, navigation, and taxi integrations.',
-    keywords: [],
+        'Privacy Policy for the My Saved Places app. Learn how the app handles location data, local storage, and optional iCloud synchronization.',
+    keywords: [
+        'My Saved Places privacy policy',
+        'location app privacy policy',
+        'map app privacy',
+        'iCloud data privacy',
+        'location storage privacy',
+    ],
 
     alternates: {
         canonical: '/legal/app/privacy-policy',
     },
 
     robots: {
-        index: false,
-        follow: false,
+        index: true,
+        follow: true,
     },
 
     appleWebApp: {
@@ -24,7 +30,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Privacy Policy',
         description:
-            'Privacy Policy for the My Saved Places app. Learn how the app handles local storage, location access, search requests, coordinates, and third-party map, navigation, and taxi integrations.',
+            'Privacy Policy for the My Saved Places app. Learn how the app handles location data, local storage, and optional iCloud synchronization.',
         type: 'article',
         locale: 'en_US',
         url: '/legal/app/privacy-policy',
@@ -35,7 +41,7 @@ export const metadata: Metadata = {
         card: 'summary',
         title: 'Privacy Policy',
         description:
-            'Privacy Policy for the My Saved Places app. Learn how the app handles local storage, location access, search requests, coordinates, and third-party map, navigation, and taxi integrations.',
+            'Privacy Policy for the My Saved Places app. Learn how the app handles location data, local storage, and optional iCloud synchronization.',
     },
 }
 

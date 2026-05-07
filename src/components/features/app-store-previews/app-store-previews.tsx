@@ -87,22 +87,10 @@ const Background = ({ tone }: { tone: Preview['tone'] }) => {
     )
 }
 
-const AppIconBackground = () => {
-    return (
-        <>
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_22%_18%,rgba(255,132,31,0.3),transparent_34%),radial-gradient(circle_at_82%_78%,rgba(34,197,94,0.18),transparent_32%),linear-gradient(160deg,#fffaf2_0%,#ffffff_48%,#fff1df_100%)]" />
-            <div className="absolute inset-0 bg-[linear-gradient(rgba(17,24,39,0.52)_1px,transparent_1px),linear-gradient(90deg,rgba(17,24,39,0.52)_1px,transparent_1px)] bg-size-[48px_48px] opacity-[0.08]" />
-            <div className="absolute -top-22 -left-24 h-72 w-72 rounded-full border-24 border-orange-200/35" />
-            <div className="absolute -right-28 -bottom-24 h-86 w-86 rounded-full border-28 border-orange-300/25" />
-        </>
-    )
-}
-
 export const AppIconArtwork = () => {
     return (
         <section aria-label="iOS app icon preview" className="h-258 w-258 bg-black p-1">
             <div className="relative flex h-256 w-5xl items-center justify-center overflow-hidden bg-white text-gray-950">
-                {/* <AppIconBackground /> */}
                 {/* <Image
                     src="/images/ios-light.png"
                     alt=""

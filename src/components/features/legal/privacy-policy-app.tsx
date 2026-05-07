@@ -5,7 +5,7 @@ export const PrivacyPolicyApp = () => {
                 <header className="space-y-3">
                     <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">Privacy Policy</h1>
 
-                    <p className="text-sm text-gray-500">Last updated: April 24, 2026</p>
+                    <p className="text-sm text-gray-500">Last updated: May 7, 2026</p>
 
                     <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
                         This Privacy Policy applies to the <span className="font-medium">My Saved Places</span> mobile
@@ -17,13 +17,16 @@ export const PrivacyPolicyApp = () => {
                     <h2 className="text-lg font-semibold sm:text-xl">Overview</h2>
 
                     <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
-                        My Saved Places helps you search for places, save locations locally on your device, and open
-                        destinations in third-party map, navigation, and taxi apps.
+                        This application respects your privacy. We do not use advertising SDKs, third-party analytics
+                        SDKs, or tracking technologies in the mobile app.
                     </p>
 
                     <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
-                        We do not use advertising SDKs, third-party analytics SDKs, or tracking technologies inside the
-                        app.
+                        Data created while using the app is stored locally on your device and, on supported iOS devices,
+                        may be synchronized with your personal iCloud account. Some features you actively use, such as
+                        place search, map display, reverse geocoding, and opening a destination in another app, may
+                        transmit the minimum necessary search text, coordinates, or technical request data to the
+                        relevant service providers.
                     </p>
                 </section>
 
@@ -31,14 +34,20 @@ export const PrivacyPolicyApp = () => {
                     <h2 className="text-lg font-semibold sm:text-xl">Data Storage</h2>
 
                     <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
-                        Saved places, lists, selected app preferences, and app language are stored locally on your
+                        The app allows users to save locations (&quot;saved places&quot;), organize them into lists,
+                        select preferred external apps, and choose an app language. This data is stored locally on your
                         device.
-                        {/* If you enable iCloud Sync on iPhone, this data may also be stored in your private iCloud account to keep it in sync across your Apple devices. */}
                     </p>
 
                     <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
-                        We do not create user accounts and we do not store your saved places, lists, app selection, app
-                        language, or current device location on our servers.
+                        If iCloud synchronization is available and enabled on your device, including when it is enabled
+                        by default on supported iOS devices, the app may store this data in your personal iCloud account
+                        in order to keep your saved places synchronized across your devices and prevent data loss when
+                        reinstalling the app or switching devices. You can turn iCloud Sync off in the app settings.
+                    </p>
+
+                    <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
+                        The developer of this app does not have access to this data.
                     </p>
                 </section>
 
@@ -46,68 +55,38 @@ export const PrivacyPolicyApp = () => {
                     <h2 className="text-lg font-semibold sm:text-xl">Location Access</h2>
 
                     <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
-                        The app may request access to your device&apos;s location to display your current position on
-                        the map and help you choose places more easily.
+                        The app may request access to your device&apos;s location in order to display your current
+                        position on the map and help you choose places.
                     </p>
 
                     <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
-                        Your current device location is not uploaded by us for storage, advertising, analytics,
-                        tracking, or profiling.
-                    </p>
-                </section>
-
-                <section className="space-y-3 sm:space-y-4">
-                    <h2 className="text-lg font-semibold sm:text-xl">Search and Coordinates</h2>
-
-                    <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
-                        When you search for a place in the app, your search query may be sent to our API layer, which
-                        forwards the request to our geocoding provider to return matching results.
-                    </p>
-
-                    <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
-                        When you request an address for coordinates, the latitude and longitude you provide may be sent
-                        to our API layer and geocoding provider to return a human-readable address.
-                    </p>
-
-                    <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
-                        When you choose to open a location in a third-party app, the relevant coordinates or destination
-                        parameters are passed to that app or its linking URL so the location can be shown there.
+                        Your current device location is used to show your position on the map and help you choose
+                        places. We do not upload your current device location to our servers for storage, advertising,
+                        analytics, tracking, or profiling. If you choose to search, reverse geocode coordinates, open a
+                        destination in another app, or share a location link, the relevant search text or coordinates
+                        may be transmitted as needed to complete that request.
                     </p>
                 </section>
 
                 <section className="space-y-3 sm:space-y-4">
-                    <h2 className="text-lg font-semibold sm:text-xl">Third-Party Services</h2>
+                    <h2 className="text-lg font-semibold sm:text-xl">Search, Maps, and Third-Party Services</h2>
 
                     <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
-                        The app relies on third-party services to display maps, load map tiles and styles, search for
-                        places, reverse geocode coordinates, and open external applications selected by the user.
+                        The app uses an API layer operated for My Saved Places to process place search and reverse
+                        geocoding requests. This API layer forwards search text or coordinates to a geocoding provider,
+                        currently LocationIQ, only to return matching places or human-readable addresses.
                     </p>
 
                     <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
-                        These services may receive technical data necessary to respond to your request, such as IP
-                        address, search text, coordinates, and app-opening parameters. For example, search and reverse
-                        geocoding requests are processed through our API layer and sent to our geocoding provider, and
-                        map rendering uses external tile and style services.
-                    </p>
-                </section>
-
-                <section className="space-y-3 sm:space-y-4">
-                    <h2 className="text-lg font-semibold sm:text-xl">External Apps and Brands</h2>
-
-                    <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
-                        My Saved Places may reference or link to third-party apps and services such as Apple Maps,
-                        Google Maps, Lyft, MAPS.ME, Uber, Waze, Yandex Maps, Yandex Navi, and Yandex Go.
+                        The app also loads map styles and map tiles from external map service providers, such as
+                        OpenFreeMap, so the map can be displayed.
                     </p>
 
                     <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
-                        All third-party product names, logos, and trademarks are the property of their respective
-                        owners. Their use in the app is for identification and interoperability purposes only and does
-                        not imply endorsement, sponsorship, or affiliation.
-                    </p>
-
-                    <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
-                        If you choose to open one of these third-party apps or services, your interaction with that app
-                        is governed by its own privacy policy and terms.
+                        When you choose to open or share a location using third-party apps or services, such as Apple
+                        Maps, Google Maps, Lyft, MAPS.ME, Uber, Waze, Yandex Maps, Yandex Navi, Yandex Go, or
+                        OpenStreetMap, the relevant coordinates or destination parameters are passed to that app or
+                        service. Their handling of that data is governed by their own privacy policies and terms.
                     </p>
                 </section>
 
@@ -115,9 +94,9 @@ export const PrivacyPolicyApp = () => {
                     <h2 className="text-lg font-semibold sm:text-xl">Data Sharing</h2>
 
                     <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
-                        We do not sell your personal data. We only transmit the limited information necessary to fulfill
-                        features you actively use, such as place search, reverse geocoding, map display, and opening a
-                        destination in a third-party app.
+                        We do not sell your personal data. We transmit only the limited information necessary to fulfill
+                        features you actively use, such as place search, reverse geocoding, map display, iCloud
+                        synchronization, and opening or sharing a destination in a third-party app or service.
                     </p>
                 </section>
 
@@ -125,8 +104,7 @@ export const PrivacyPolicyApp = () => {
                     <h2 className="text-lg font-semibold sm:text-xl">Children&apos;s Privacy</h2>
 
                     <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
-                        This app is not directed to children under 13, and we do not knowingly collect personal
-                        information from children.
+                        This app does not knowingly collect personal information from children.
                     </p>
                 </section>
 
@@ -134,7 +112,7 @@ export const PrivacyPolicyApp = () => {
                     <h2 className="text-lg font-semibold sm:text-xl">Changes to This Policy</h2>
 
                     <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
-                        We may update this Privacy Policy from time to time. Any changes will be reflected on this page.
+                        We may update this Privacy Policy in the future. Any changes will be reflected on this page.
                     </p>
                 </section>
 
