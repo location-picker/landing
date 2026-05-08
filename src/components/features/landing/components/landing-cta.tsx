@@ -2,22 +2,22 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const CTA_BUTTONS = [
-    // {
-    //     id: 'appstore',
-    //     href: '#',
-    //     icon: '/images/app-button/apple-logo.svg',
-    //     textIcon: '/images/app-button/apple-text.svg',
-    //     alt: 'Download on App Store',
-    //     iconSize: { w: 20, h: 25 },
-    // },
     {
-        id: 'web',
-        href: 'https://app.mysavedplaces.com',
-        icon: '/images/app-button/web-logo.svg',
-        textIcon: '/images/app-button/web-text.svg',
-        alt: 'Open Web App',
-        iconSize: { w: 20, h: 20 },
+        id: 'appstore',
+        href: 'https://apps.apple.com/us/app/my-saved-places/id6767223800',
+        icon: '/images/app-button/apple-logo.svg',
+        textIcon: '/images/app-button/apple-text.svg',
+        alt: 'Download on App Store',
+        iconSize: { w: 20, h: 25 },
     },
+    // {
+    //     id: 'web',
+    //     href: 'https://app.mysavedplaces.com',
+    //     icon: '/images/app-button/web-logo.svg',
+    //     textIcon: '/images/app-button/web-text.svg',
+    //     alt: 'Open Web App',
+    //     iconSize: { w: 20, h: 20 },
+    // },
 ]
 
 export const LandingCTA = () => {
