@@ -13,7 +13,7 @@ import './globals.css'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://mysavedplaces.com'
 
 const roboto = Roboto({
-    subsets: ['latin', 'cyrillic'],
+    subsets: ['latin'],
 })
 
 export const metadata = {
