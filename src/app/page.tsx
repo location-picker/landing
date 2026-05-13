@@ -8,17 +8,28 @@ export const metadata: Metadata = {
         'Organize locations and save favorite places in seconds. Keep everything in one place and navigate instantly using your favorite app.',
     keywords: [
         'my saved places',
+        'save places once',
         'favorite locations',
         'saved locations',
         'location organizer',
         'save favorite places',
         'organize locations',
+        'organize favorite places',
         'store locations',
         'place organizer',
         'map organizer',
         'location manager',
         'save places app',
         'organize saved places',
+        'navigation app favorites',
+        'taxi app saved places',
+        'open saved places in Google Maps',
+        'open saved places in Waze',
+        'Apple Maps saved places',
+        'Yandex Maps saved places',
+        'Maps.me saved places',
+        'iOS location organizer',
+        'iCloud sync saved places',
     ],
 
     alternates: {
@@ -44,7 +55,7 @@ export const metadata: Metadata = {
         siteName: 'My Saved Places',
         images: [
             {
-                url: '/images/screenshots/home-portrait.png',
+                url: '/images/og-preview.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'My Saved Places',
@@ -57,7 +68,7 @@ export const metadata: Metadata = {
         title: 'My Saved Places',
         description:
             'Organize locations and save favorite places in seconds. Keep everything in one place and navigate instantly using your favorite app.',
-        images: ['/images/screenshots/home-portrait.png'],
+        images: ['/images/og-preview.jpg'],
     },
 }
 

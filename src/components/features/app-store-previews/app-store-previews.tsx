@@ -143,6 +143,52 @@ const PhoneScreenshot = ({ preview }: { preview: Preview }) => {
     )
 }
 
+const OgBackground = () => {
+    return (
+        <>
+            <div className="absolute inset-0 bg-[linear-gradient(135deg,#f8fafc_0%,#f1f5f9_48%,#fff7ed_100%)]" />
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(15,23,42,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.06)_1px,transparent_1px)] bg-size-[48px_48px] opacity-45" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_16%_22%,rgba(249,115,22,0.14),transparent_26%),radial-gradient(circle_at_78%_16%,rgba(59,130,246,0.09),transparent_24%),radial-gradient(circle_at_62%_84%,rgba(34,197,94,0.08),transparent_28%)]" />
+            <div className="absolute top-16 left-14 h-84 w-84 rounded-full border-[26px] border-orange-200/24" />
+            <div className="absolute right-12 bottom-10 h-104 w-104 rounded-full border-[30px] border-slate-300/22" />
+        </>
+    )
+}
+
+export const OgPreviewArtwork = () => {
+    return (
+        <section
+            aria-label="Open Graph preview"
+            className="relative h-[630px] w-[1200px] overflow-hidden bg-slate-50 text-gray-950"
+        >
+            <OgBackground />
+
+            <div className="relative z-10 flex h-full items-center justify-center">
+                <div className="relative z-20 mx-auto w-[760px] text-center">
+                    <h1 className="text-[72px] leading-[1.08] font-extrabold tracking-normal whitespace-nowrap text-gray-950">
+                        My <span className="text-orange-500">Saved</span> Places
+                    </h1>
+                    <p className="mx-auto mt-6 max-w-[620px] text-[36px] leading-[1.32] font-semibold text-gray-600">
+                        Save places once. Open them in any map, navigation, or taxi.
+                    </p>
+                </div>
+
+                <div className="absolute top-[-100px] right-[-36px] z-10 h-[890px] w-[534px] rotate-[2deg]">
+                    <div className="absolute inset-x-10 top-36 h-[650px] rounded-[90px] bg-black/18 blur-3xl" />
+                    <Image
+                        src="/images/screenshots/home-left.png"
+                        alt="My Saved Places app on iPhone"
+                        fill
+                        priority
+                        sizes="534px"
+                        className="relative object-contain opacity-45 drop-shadow-[0_28px_44px_rgba(4,31,46,0.22)] saturate-75"
+                    />
+                </div>
+            </div>
+        </section>
+    )
+}
+
 export const AppStorePreviewArtwork = ({ preview }: { preview: Preview }) => {
     return (
         <section
@@ -203,6 +249,18 @@ const SplashThumbnail = () => {
     )
 }
 
+const OgPreviewThumbnail = () => {
+    return (
+        <Link href="/app-store-previews/og" className="group block">
+            <div className="h-[100.8px] w-[192px] overflow-hidden bg-white shadow-xl ring-1 ring-gray-200 transition duration-200 group-hover:-translate-y-1 group-hover:shadow-2xl">
+                <div className="origin-top-left scale-[0.16]">
+                    <OgPreviewArtwork />
+                </div>
+            </div>
+        </Link>
+    )
+}
+
 export const AppStorePreviews = () => {
     return (
         <main className="min-h-full bg-neutral-100 p-10">
@@ -216,6 +274,9 @@ export const AppStorePreviews = () => {
             </div>
             <div className="mt-10">
                 <SplashThumbnail />
+            </div>
+            <div className="mt-10">
+                <OgPreviewThumbnail />
             </div>
         </main>
     )

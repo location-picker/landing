@@ -10,9 +10,15 @@ import { TailwindIndicator } from '@/components/ui/tailwind-indicator'
 
 import './globals.css'
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://mysavedplaces.com'
+
 const roboto = Roboto({
     subsets: ['latin', 'cyrillic'],
 })
+
+export const metadata = {
+    metadataBase: new URL(siteUrl),
+}
 
 export const viewport: Viewport = {
     width: 'device-width',

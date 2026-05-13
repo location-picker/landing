@@ -12,6 +12,8 @@ export const metadata: Metadata = {
         'map app privacy',
         'iCloud data privacy',
         'location storage privacy',
+        'saved places app privacy',
+        'iOS location app privacy',
     ],
 
     alternates: {
@@ -28,20 +30,29 @@ export const metadata: Metadata = {
     },
 
     openGraph: {
-        title: 'Privacy Policy',
+        title: 'Privacy Policy | My Saved Places',
         description:
             'Privacy Policy for the My Saved Places app. Learn how the app handles location data, local storage, and optional iCloud synchronization.',
         type: 'article',
         locale: 'en_US',
         url: '/legal/app/privacy-policy',
         siteName: 'My Saved Places',
+        images: [
+            {
+                url: '/images/og-preview.jpg',
+                width: 1200,
+                height: 630,
+                alt: 'My Saved Places app preview',
+            },
+        ],
     },
 
     twitter: {
-        card: 'summary',
-        title: 'Privacy Policy',
+        card: 'summary_large_image',
+        title: 'Privacy Policy | My Saved Places',
         description:
             'Privacy Policy for the My Saved Places app. Learn how the app handles location data, local storage, and optional iCloud synchronization.',
+        images: ['/images/og-preview.jpg'],
     },
 }
 
