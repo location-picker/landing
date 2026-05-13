@@ -1,5 +1,3 @@
-'use client'
-
 import Link from 'next/link'
 
 import { LandingApps } from './components/landing-apps'
@@ -8,7 +6,7 @@ import { LandingScreenshots } from './components/landing-screenshots'
 
 const LandingHeader = () => {
     return (
-        <header className="inset-0 top-0 flex h-16 w-full shrink-0 items-center justify-center px-4 sm:fixed sm:justify-end md:h-20 md:px-12">
+        <header className="flex h-16 w-full shrink-0 items-center justify-center px-4 sm:fixed sm:inset-x-0 sm:top-0 sm:justify-end md:h-20 md:px-12">
             <nav aria-label="Site navigation" className="flex items-center justify-center gap-4 text-sm font-medium">
                 <Link href="/why-my-saved-places" className="text-gray-500 transition hover:text-gray-950">
                     About
@@ -31,7 +29,7 @@ export const Landing = () => {
 
                     <div className="text-center lg:text-left">
                         <h1 className="mb-6 text-4xl font-extrabold text-gray-950 md:text-6xl">
-                            My <span className="text-orange-500">Saved</span> Places
+                            My <span className="text-orange-600">Saved</span> Places
                         </h1>
 
                         <p className="mb-6 text-lg text-gray-600 md:text-xl">

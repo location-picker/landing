@@ -1,3 +1,5 @@
+'use client'
+
 import { useEffect, useState } from 'react'
 
 import Image from 'next/image'
@@ -11,6 +13,7 @@ const images = screenshotFlow.map(name => `/images/screenshots/${name}-${modifie
 
 export const LandingScreenshots = () => {
     const [index, setIndex] = useState(0)
+    const activeImage = images[index]
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -22,18 +25,16 @@ export const LandingScreenshots = () => {
 
     return (
         <div className="relative h-166 w-100 shrink-0">
-            {images.map((src, i) => (
-                <Image
-                    key={`screenshot-${i}`}
-                    src={src}
-                    alt="App screenshot"
-                    fill
-                    className={`absolute top-0 left-0 object-contain transition-opacity duration-500 ${
-                        i === index ? 'opacity-100' : 'opacity-0'
-                    }`}
-                    priority={i === 0}
-                />
-            ))}
+            <Image
+                key={activeImage}
+                src={activeImage}
+                alt="App screenshot"
+                fill
+                className="object-contain"
+                priority={index === 0}
+                fetchPriority={index === 0 ? 'high' : undefined}
+                sizes="400px"
+            />
         </div>
     )
 }
