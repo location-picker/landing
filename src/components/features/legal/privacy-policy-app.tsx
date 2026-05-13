@@ -25,8 +25,8 @@ export const PrivacyPolicyApp = () => {
                         Data created while using the app is stored locally on your device and, on supported iOS devices,
                         may be synchronized with your personal iCloud account. Some features you actively use, such as
                         place search, map display, reverse geocoding, and opening a destination in another app, may
-                        transmit the minimum necessary search text, coordinates, or technical request data to the
-                        relevant service providers.
+                        transmit the minimum necessary search text, coordinates, language or locale preference, or
+                        technical request data to the relevant service providers.
                     </p>
                 </section>
 
@@ -63,8 +63,10 @@ export const PrivacyPolicyApp = () => {
                         Your current device location is used to show your position on the map and help you choose
                         places. We do not upload your current device location to our servers for storage, advertising,
                         analytics, tracking, or profiling. If you choose to search, reverse geocode coordinates, open a
-                        destination in another app, or share a location link, the relevant search text or coordinates
-                        may be transmitted as needed to complete that request.
+                        destination in another app, or share a location link, the relevant search text, coordinates, or
+                        language or locale preference may be transmitted as needed to complete that request. For place
+                        search, coordinates may include the current map center or current location when available, so
+                        the app can prioritize nearby or country-relevant results.
                     </p>
                 </section>
 
@@ -73,8 +75,9 @@ export const PrivacyPolicyApp = () => {
 
                     <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
                         The app uses an API layer operated for My Saved Places to process place search and reverse
-                        geocoding requests. This API layer forwards search text or coordinates to a geocoding provider,
-                        currently LocationIQ, only to return matching places or human-readable addresses.
+                        geocoding requests. This API layer forwards search text, optional map-center or current-location
+                        coordinates, and language or locale preference to a geocoding provider, currently LocationIQ,
+                        only to return matching places or human-readable addresses.
                     </p>
 
                     <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
@@ -96,7 +99,8 @@ export const PrivacyPolicyApp = () => {
                     <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
                         We do not sell your personal data. We transmit only the limited information necessary to fulfill
                         features you actively use, such as place search, reverse geocoding, map display, iCloud
-                        synchronization, and opening or sharing a destination in a third-party app or service.
+                        synchronization, and opening or sharing a destination in a third-party app or service. This may
+                        include search text, coordinates used for search context, and language or locale preference.
                     </p>
                 </section>
 
