@@ -7,6 +7,7 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 import { Roboto } from 'next/font/google'
 
 import { TailwindIndicator } from '@/components/ui/tailwind-indicator'
+import { CookieConsent } from '@/components/ui/cookie-consent'
 
 import './globals.css'
 
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
             </head>
             <body className="h-full bg-white antialiased">
                 <main className="h-full">{children}</main>
+                <CookieConsent />
                 <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID as string} />
                 <TailwindIndicator />
             </body>
