@@ -163,12 +163,12 @@ export const OgPreviewArtwork = () => {
         >
             <OgBackground />
 
-            <div className="relative z-10 flex h-full items-center justify-center">
-                <div className="relative z-20 mx-auto w-[760px] text-center">
-                    <h1 className="text-[72px] leading-[1.08] font-extrabold tracking-normal whitespace-nowrap text-gray-950">
+            <div className="relative z-10 flex h-full items-center justify-start">
+                <div className="relative z-20 w-[760px] pl-[100px]">
+                    <h1 className="mb-6 text-[72px] leading-[1.08] font-extrabold tracking-normal whitespace-nowrap text-gray-950">
                         My <span className="text-orange-500">Saved</span> Places
                     </h1>
-                    <p className="mx-auto mt-6 max-w-[620px] text-[36px] leading-[1.32] font-semibold text-gray-600">
+                    <p className="max-w-[620px] text-[36px] leading-[1.32] font-semibold text-gray-600">
                         Save places once. Open them in any map, navigation, or taxi.
                     </p>
                 </div>
@@ -181,7 +181,7 @@ export const OgPreviewArtwork = () => {
                         fill
                         priority
                         sizes="534px"
-                        className="relative object-contain opacity-45 drop-shadow-[0_28px_44px_rgba(4,31,46,0.22)] saturate-75"
+                        className="relative object-contain drop-shadow-[0_28px_44px_rgba(4,31,46,0.22)] saturate-75"
                     />
                 </div>
             </div>
