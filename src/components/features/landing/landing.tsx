@@ -29,7 +29,7 @@ export const Landing = () => {
 
                     <div className="text-center lg:text-left">
                         <h1 className="mb-6 text-4xl font-extrabold text-gray-950 md:text-6xl">
-                            My <span className="text-orange-600">Saved</span> Places
+                            My <span className="text-[#F97316]">Saved</span> Places
                         </h1>
 
                         <p className="mb-6 text-lg text-gray-600 md:text-xl">

@@ -7,7 +7,7 @@ import Image from 'next/image'
 type Modifier = 'portrait' | 'left'
 const modifier: Modifier = 'portrait'
 
-const screenshotFlow = ['home', 'google', 'home', 'save', 'saved', 'saved-list', 'preview', 'home', 'settings-apps']
+const screenshotFlow = ['home', 'google', 'save', 'save-list', 'save-icon', 'saved', 'preview', 'settings-apps']
 
 const images = screenshotFlow.map(name => `/images/screenshots/${name}-${modifier}.png`)
 
