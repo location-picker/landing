@@ -2,8 +2,6 @@
 
 import { useEffect, useState } from 'react'
 
-import Link from 'next/link'
-
 const COOKIE_CONSENT_STORAGE_KEY = 'my-saved-places-cookie-consent'
 
 export const CookieConsent = () => {

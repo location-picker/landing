@@ -9,54 +9,72 @@ type Preview = {
     description: string
     screenshot: string
     screenshotAlt: string
+    badge?: string
     tone: 'map' | 'save' | 'saved' | 'navigate' | 'settings'
 }
 
 export const appStorePreviews: Preview[] = [
     {
-        id: '1',
-        title: 'Search places',
-        description: 'Search places by coordinates, address, or name',
+        id: 'home',
+        title: 'Your place launcher',
+        description: 'Open the same spot in maps, navigation, or ride apps',
         screenshot: '/images/screenshots/home-portrait.png',
         screenshotAlt: 'My Saved Places map screen',
         tone: 'map',
     },
     {
-        id: '2',
+        id: 'google',
         title: 'Start navigation',
-        description: 'Open a route or share any saved location',
+        description: 'Launch routes in maps, navigation, or ride apps',
         screenshot: '/images/screenshots/google-portrait.png',
         screenshotAlt: 'My Saved Places navigation app screen',
         tone: 'navigate',
     },
     {
-        id: '3',
-        title: 'Save any places',
-        description: 'Add any location in just a few seconds',
+        id: 'save',
+        title: 'Save any location',
+        description: 'Use search, address, coordinates, or the map pin',
         screenshot: '/images/screenshots/save-portrait.png',
         screenshotAlt: 'My Saved Places save screen',
         tone: 'save',
     },
     {
-        id: '4',
-        title: 'Organize places',
-        description: 'Create lists and pin saved places',
+        id: 'save-list',
+        title: 'Organize by lists',
+        description: 'Group travel spots, routes, recommendations, and plans',
+        screenshot: '/images/screenshots/save-list-portrait.png',
+        screenshotAlt: 'My Saved Places list selection screen',
+        tone: 'saved',
+    },
+    {
+        id: 'save-icon',
+        title: 'Add custom icons',
+        description: 'Make every saved place easier to recognize',
+        screenshot: '/images/screenshots/save-icon-portrait.png',
+        screenshotAlt: 'My Saved Places icon selection screen',
+        badge: 'NEW',
+        tone: 'save',
+    },
+    {
+        id: 'saved',
+        title: 'Browse saved places',
+        description: 'Find favorite locations without searching again',
         screenshot: '/images/screenshots/saved-portrait.png',
-        screenshotAlt: 'My Saved Places saved place screen',
+        screenshotAlt: 'My Saved Places saved places screen',
         tone: 'saved',
     },
     {
-        id: '5',
-        title: 'Browse your list',
-        description: 'Return to saved locations without searching',
-        screenshot: '/images/screenshots/saved-list-portrait.png',
-        screenshotAlt: 'My Saved Places saved list screen',
-        tone: 'saved',
+        id: 'preview',
+        title: 'Open place details',
+        description: 'Navigate, copy, share, or launch the best app',
+        screenshot: '/images/screenshots/preview-portrait.png',
+        screenshotAlt: 'My Saved Places saved place details screen',
+        tone: 'navigate',
     },
     {
-        id: '6',
-        title: 'Pick favorite apps',
-        description: 'Choose maps, navigation, or taxi apps',
+        id: 'settings-apps',
+        title: 'Choose favorite apps',
+        description: 'Put Apple Maps, Google Maps, Waze, Uber, and more',
         screenshot: '/images/screenshots/settings-apps-portrait.png',
         screenshotAlt: 'My Saved Places favorite apps settings screen',
         tone: 'settings',
@@ -72,6 +90,29 @@ const toneAccents: Record<Preview['tone'], string> = {
     navigate: 'rgba(59,130,246,0.18)',
     settings: 'rgba(245,158,11,0.22)',
 }
+
+const supportedApps = [
+    { id: 'apple-maps', name: 'Apple Maps', icon: '/images/apps/apple-maps.png', category: 'Maps' },
+    { id: 'google-maps', name: 'Google Maps', icon: '/images/apps/google-maps.png', category: 'Maps' },
+    { id: 'yandex-maps', name: 'Yandex Maps', icon: '/images/apps/yandex-maps.png', category: 'Maps' },
+    { id: 'mapsme', name: 'MAPS.ME', icon: '/images/apps/mapsme.png', category: 'Maps' },
+    { id: 'openstreetmap', name: 'OpenStreetMap', icon: '/images/apps/openstreetmap.png', category: 'Maps' },
+    { id: 'waze', name: 'Waze', icon: '/images/apps/waze.png', category: 'Navigation' },
+    { id: 'here-wego', name: 'HERE WeGo', icon: '/images/apps/here-wego.png', category: 'Navigation' },
+    { id: 'yandex-navi', name: 'Yandex Navi', icon: '/images/apps/yandex-navi.png', category: 'Navigation' },
+    { id: 'citymapper', name: 'Citymapper', icon: '/images/apps/citymapper.png', category: 'Transit' },
+    { id: 'moovit', name: 'Moovit', icon: '/images/apps/moovit.png', category: 'Transit' },
+    { id: 'uber', name: 'Uber', icon: '/images/apps/uber.png', category: 'Rides' },
+    { id: 'lyft', name: 'Lyft', icon: '/images/apps/lyft.png', category: 'Rides' },
+    { id: 'yandex-go', name: 'Yandex Go', icon: '/images/apps/yandex-go.png', category: 'Rides' },
+]
+
+const supportedAppGroups = [
+    { id: 'maps', title: 'Maps', caption: 'Find and view places', color: 'bg-emerald-500', apps: supportedApps.filter(app => app.category === 'Maps') },
+    { id: 'navigation', title: 'Navigation', caption: 'Drive and route faster', color: 'bg-blue-500', apps: supportedApps.filter(app => app.category === 'Navigation') },
+    { id: 'transit', title: 'Transit', caption: 'Move through the city', color: 'bg-violet-500', apps: supportedApps.filter(app => app.category === 'Transit') },
+    { id: 'rides', title: 'Rides', caption: 'Call a car in one tap', color: 'bg-orange-500', apps: supportedApps.filter(app => app.category === 'Rides') },
+]
 
 const Background = ({ tone }: { tone: Preview['tone'] }) => {
     return (
@@ -135,7 +176,7 @@ const PhoneScreenshot = ({ preview }: { preview: Preview }) => {
                 src={preview.screenshot}
                 alt={preview.screenshotAlt}
                 fill
-                priority={preview.id === '1'}
+                priority={preview.id === 'home'}
                 sizes="1048px"
                 className="relative object-contain drop-shadow-[0_52px_76px_rgba(15,23,42,0.26)]"
             />
@@ -189,6 +230,68 @@ export const OgPreviewArtwork = () => {
     )
 }
 
+export const SupportedAppsArtwork = () => {
+    return (
+        <section
+            aria-label="Supported apps preview"
+            className="relative h-699 w-322.5 overflow-hidden bg-[#fff8ef] text-gray-950"
+        >
+            <Background tone="navigate" />
+
+            <div className="relative z-10 flex h-full flex-col px-24 pt-34 pb-14">
+                <div className="text-center">
+                    <h1 className="mx-auto max-w-5xl text-[98px] leading-[0.94] font-black tracking-normal">
+                        Every app.
+                        <br />
+                        One saved place.
+                    </h1>
+                    <p className="mx-auto mt-7 max-w-215 text-[44px] leading-[1.08] font-bold text-gray-600">
+                        Open locations in maps, transit, navigation, or rides.
+                    </p>
+                </div>
+
+                <div className="mt-11 flex flex-col gap-5">
+                    {supportedAppGroups.map(group => (
+                        <div key={group.id}>
+                            <div className="mb-3 flex items-center gap-4">
+                                <div className={['h-4 w-16 rounded-full', group.color].join(' ')} />
+                                <div className="text-[30px] leading-none font-black text-gray-950">{group.title}</div>
+                                <div className="text-[19px] leading-none font-bold text-gray-500">{group.caption}</div>
+                            </div>
+
+                            <div className="space-y-2.5">
+                                {group.apps.map(app => (
+                                    <div
+                                        key={app.id}
+                                        className="flex h-22 items-center gap-4 rounded-[24px] bg-white/82 py-2.5 pr-5 pl-2.5 shadow-[0_8px_22px_rgba(15,23,42,0.1)] ring-1 ring-gray-200/75 backdrop-blur"
+                                    >
+                                        <div className="flex h-17 w-17 shrink-0 items-center justify-center rounded-[18px] bg-gradient-to-br from-white via-white to-orange-50 p-2.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.95),0_7px_16px_rgba(15,23,42,0.1)] ring-1 ring-gray-200/85">
+                                            <Image
+                                                src={app.icon}
+                                                alt={app.name}
+                                                width={48}
+                                                height={48}
+                                                sizes="48px"
+                                                className="h-full w-full rounded-[12px] object-contain"
+                                            />
+                                        </div>
+                                        <div className="min-w-0 flex-1 truncate text-[25px] leading-none font-black text-gray-950">
+                                            {app.name}
+                                        </div>
+                                        <div className="rounded-full bg-orange-100 px-4 py-1.5 text-[15px] leading-none font-black text-orange-700">
+                                            Open
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    )
+}
+
 export const AppStorePreviewArtwork = ({ preview }: { preview: Preview }) => {
     return (
         <section
@@ -196,6 +299,12 @@ export const AppStorePreviewArtwork = ({ preview }: { preview: Preview }) => {
             className="relative h-699 w-322.5 overflow-hidden bg-[#fff8ef] text-gray-950"
         >
             <Background tone={preview.tone} />
+
+            {preview.badge && (
+                <div className="absolute top-28 right-24 z-20 rounded-full bg-orange-500 px-8 py-3 text-[30px] leading-none font-black tracking-[0.08em] text-white shadow-[0_16px_30px_rgba(249,115,22,0.25)]">
+                    {preview.badge}
+                </div>
+            )}
 
             <div className="relative z-10 flex h-full flex-col items-center px-28 pt-44">
                 <div className="text-center">
@@ -219,6 +328,18 @@ const PreviewThumbnail = ({ preview }: { preview: Preview }) => {
             <div className="h-[447.36px] w-[206.4px] overflow-hidden bg-white shadow-xl ring-1 ring-gray-200 transition duration-200 group-hover:-translate-y-1 group-hover:shadow-2xl">
                 <div className="origin-top-left scale-[0.16]">
                     <AppStorePreviewArtwork preview={preview} />
+                </div>
+            </div>
+        </Link>
+    )
+}
+
+const SupportedAppsThumbnail = () => {
+    return (
+        <Link href="/app-store-previews/supported-apps" className="group block">
+            <div className="h-[447.36px] w-[206.4px] overflow-hidden bg-white shadow-xl ring-1 ring-gray-200 transition duration-200 group-hover:-translate-y-1 group-hover:shadow-2xl">
+                <div className="origin-top-left scale-[0.16]">
+                    <SupportedAppsArtwork />
                 </div>
             </div>
         </Link>
@@ -268,6 +389,7 @@ export const AppStorePreviews = () => {
                 {appStorePreviews.map(preview => (
                     <PreviewThumbnail key={preview.id} preview={preview} />
                 ))}
+                <SupportedAppsThumbnail />
             </div>
             <div className="mt-10">
                 <AppIconThumbnail />
