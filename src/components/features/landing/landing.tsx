@@ -8,10 +8,10 @@ const LandingHeader = () => {
     return (
         <header className="flex h-16 w-full shrink-0 items-center justify-center px-4 sm:fixed sm:inset-x-0 sm:top-0 sm:justify-end md:h-20 md:px-12">
             <nav aria-label="Site navigation" className="flex items-center justify-center gap-4 text-sm font-medium">
-                <Link href="/why-my-saved-places" className="text-gray-500 transition hover:text-gray-950">
+                <Link href="/why-my-saved-places" className="text-gray-500 transition hover:text-[#F97316]">
                     About
                 </Link>
-                <Link href="/legal/app/privacy-policy" className="text-gray-500 transition hover:text-gray-950">
+                <Link href="/legal/app/privacy-policy" className="text-gray-500 transition hover:text-[#F97316]">
                     Privacy Policy
                 </Link>
             </nav>
