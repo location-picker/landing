@@ -1,9 +1,6 @@
 import { Metadata } from 'next'
 
-import {
-    AppStorePreviewDetail,
-    appStorePreviews,
-} from '@/components/features/app-store-previews/app-store-previews'
+import { AppStore } from '@/components/features/app-store-previews/app-store'
 
 type PageProps = {
     params: Promise<{
@@ -19,10 +16,8 @@ export const metadata: Metadata = {
     },
 }
 
-export const generateStaticParams = () => appStorePreviews.map(preview => ({ previewId: preview.id }))
-
 export default async function AppStorePreviewPage({ params }: PageProps) {
     const { previewId } = await params
 
-    return <AppStorePreviewDetail id={previewId} />
+    return <AppStore previewId={previewId} />
 }
